@@ -1,11 +1,15 @@
 * {
   box-sizing: border-box;
 }
+:root {
+  --font-heading: "sen", sans-serif;
+  --primary-color: #ffb900;
+}
 html {
   font-style: 62.5%;
 }
 body {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-family: "Poppins", sans-serif;
 }
 .main-content {
@@ -25,12 +29,20 @@ a {
   background: black;
   min-width: 50px;
   line-height: 50px;
-  border-radius: 20px;
+  border-radius: 999px;
   text-align: center;
   padding: 0px 10px;
   color: white;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.header.fixed {
+  z-index: 1;
+  position: sticky;
+  top: -28px;
 }
 .header .body {
   padding: 30px 0px 8px;
@@ -45,16 +57,17 @@ a {
 }
 .nav a {
   color: rgba(0, 0, 0, 0.411);
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   padding: 8px 21px;
 }
+
 .nav a:hover {
   color: black;
   text-shadow: 1px 0px 0px currentColor;
 }
 .nav li.active a::after {
   position: absolute;
-  left: 205px;
+  /* left: 205px; */
   width: 12px;
   height: 2px;
   background: black;
@@ -67,4 +80,133 @@ a {
 }
 .header .action {
   margin-left: 49px;
+}
+/* ========================hero-left============================ */
+.hero {
+  padding-top: 56px 0px 65px;
+  background: #fffcf4;
+}
+.hero .body {
+  display: flex;
+}
+.hero .media-block {
+  position: relative;
+  width: 48%;
+}
+.hero .content-block {
+  width: 52%;
+}
+.hero .hero-samurai {
+  padding: 20px;
+  position: absolute;
+  bottom: 48px;
+  right: 0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.1);
+}
+.hero-samurai .item {
+  display: flex;
+  align-items: center;
+}
+.hero-samurai .icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff9e8;
+}
+.hero-samurai .icon2 {
+  background: #fcefff;
+}
+.hero-samurai .icon3 {
+  background: #ebeaff;
+}
+.hero-samurai .info {
+  margin-left: 16px;
+}
+.hero-samurai .tabel {
+  color: #5f5b53;
+  font-size: 1rem;
+  line-height: 1.86;
+}
+.hero-samurai .title {
+  color: #171100;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+/* ==============hero-right=========== */
+.hero .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: -1.16px;
+}
+.hero .content-block {
+  width: 52%;
+  padding-left: 130px;
+  padding-top: 64px;
+}
+.hero .ct-group {
+  align-items: center;
+  margin-top: 38px;
+  display: flex;
+}
+.hero .desc {
+  margin-top: 20px;
+  color: #5f5b53;
+  font-size: 1.1rem;
+  line-height: 1.67;
+}
+.hero-cta {
+  min-width: 180px;
+  line-height: 64px;
+  background: var(--primary-color);
+}
+.hero .watch-video {
+  margin-left: 28px;
+  border: none;
+  display: flex;
+  background: transparent;
+  align-items: center;
+  cursor: pointer;
+}
+.hero .watch-video .icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+  background: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+}
+.hero .watch-video span {
+  margin-left: 14px;
+  color: #171100;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.67;
+}
+.hero .desc {
+  margin-top: 48px;
+}
+.hero .stats {
+  margin-top: 8px;
+}
+.hero .stats strong {
+  margin-right: 10px;
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.hero .stats strong:nth-child(2) {
+  margin-left: 28px;
 }
